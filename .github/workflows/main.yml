@@ -13,4 +13,4 @@ jobs:
         with:
           collection: RemoteBikeTesting.postman_collection.json
       - run: npm install -g newman
-      - run: newman run https://github.com/matthewdheilmanvanderbilt/Final-Project/blob/master/.github/workflows/RemoteBikeTesting.postman_collection.json
+      - run: newman run https://github.com/matthewdheilmanvanderbilt/Final-Project/blob/46285febc11d567e529f16bb5f179f1851c716c3/.github/workflows/RemoteBikeTesting.postman_collection.json
