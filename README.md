@@ -10,7 +10,7 @@ The ABD API is built on a serverless architecture.  The goal was to create an so
 
 ![alt text](https://github.com/matthewdheilmanvanderbilt/Final-Project/blob/master/ArchitectureScreenShot.png?raw=true)
 
-###Stack
+### Stack
 * Database - AWS DynamoDB
 * API's - AWS Lambda's written in Java
 * API Gateway - AWS API Gateway
