@@ -11,5 +11,5 @@ jobs:
       - uses: actions/checkout@master
       - uses: matt-ball/newman-action@master
         with:
-          collection: postman_collection.json
+          collection: RemoteBikeTesting.postman_collection.json
           environment: postman_environment.json
