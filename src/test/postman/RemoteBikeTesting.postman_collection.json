@@ -34,7 +34,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"description\": \"Schwinn Banana Seat\", \"gender\": \"U\", \"frameSize\": \"15-16\", \"condition\": \"good\", \"address\": \"West Chester, PA 19380\"}"
+					"raw": "{\"description\": \"Spiderman Kids Bike\", \"gender\": \"U\", \"frameSize\": \"13-15\", \"condition\": \"good\", \"address\": \"West Chester, PA 19380\"}"
 				},
 				"url": {
 					"raw": "https://ny8ztrtpv8.execute-api.us-east-1.amazonaws.com/dev/bikes/",
@@ -66,10 +66,10 @@
 							"    pm.response.to.have.status(200);",
 							"});",
 							"",
-							"pm.test(\"Create Bike 1\", () => {",
+							"pm.test(\"Create Bike 2\", () => {",
 							"  const responseJson = pm.response.json();",
 							"  pm.expect(responseJson.id);",
-							"  pm.globals.set(\"uuid1\", responseJson.id);",
+							"  pm.globals.set(\"uuid2\", responseJson.id);",
 							"",
 							"});",
 							"",
@@ -84,7 +84,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"description\": \"Schwinn Banana Seat\", \"gender\": \"U\", \"frameSize\": \"15-16\", \"condition\": \"good\", \"address\": \"West Chester, PA 19380\"}"
+					"raw": "{\"description\": \"Schwinn Banana Seat\", \"gender\": \"U\", \"frameSize\": \"16-17\", \"condition\": \"good\", \"address\": \"Downingtown, PA 19335\"}"
 				},
 				"url": {
 					"raw": "https://ny8ztrtpv8.execute-api.us-east-1.amazonaws.com/dev/bikes/",
@@ -119,7 +119,7 @@
 							"pm.test(\"Create Bike 1\", () => {",
 							"  const responseJson = pm.response.json();",
 							"  pm.expect(responseJson.id);",
-							"  pm.globals.set(\"uuid1\", responseJson.id);",
+							"  pm.globals.set(\"uuid3\", responseJson.id);",
 							"",
 							"});",
 							"",
@@ -134,7 +134,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"description\": \"Schwinn Banana Seat\", \"gender\": \"U\", \"frameSize\": \"15-16\", \"condition\": \"good\", \"address\": \"West Chester, PA 19380\"}"
+					"raw": "{\"description\": \"Beach Bike\", \"gender\": \"F\", \"frameSize\": \"19-21\", \"condition\": \"fair, works, little rust\", \"address\": \"Washington DC\"}"
 				},
 				"url": {
 					"raw": "https://ny8ztrtpv8.execute-api.us-east-1.amazonaws.com/dev/bikes/",
@@ -169,7 +169,7 @@
 							"pm.test(\"Create Bike 1\", () => {",
 							"  const responseJson = pm.response.json();",
 							"  pm.expect(responseJson.id);",
-							"  pm.globals.set(\"uuid1\", responseJson.id);",
+							"  pm.globals.set(\"uuid4\", responseJson.id);",
 							"",
 							"});",
 							"",
@@ -184,7 +184,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"description\": \"Schwinn Banana Seat\", \"gender\": \"U\", \"frameSize\": \"15-16\", \"condition\": \"good\", \"address\": \"West Chester, PA 19380\"}"
+					"raw": "{\"description\": \"Mongoose BMX w/gyro\", \"gender\": \"M\", \"frameSize\": \"17-19\", \"condition\": \"almost new\", \"address\": \"Los Angeles CA\"}"
 				},
 				"url": {
 					"raw": "https://ny8ztrtpv8.execute-api.us-east-1.amazonaws.com/dev/bikes/",
