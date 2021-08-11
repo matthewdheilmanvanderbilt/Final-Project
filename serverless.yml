@@ -1,0 +1,88 @@
+# Welcome to Serverless!
+#
+# This file is the main config file for your service.
+# It's very minimal at this point and uses default values.
+# You can always add more config options for more control.
+# We've included some commented out config examples here.
+# Just uncomment any of them to get that config option.
+#
+# For full config options, check the docs:
+#    docs.serverless.com
+#
+
+service: bikes-api
+
+custom:
+  bikesTableName: 'bikes-${self:provider.stage}'
+
+provider:
+   name: aws
+   runtime: java8
+   stage: ${opt:stage, 'dev'}
+   region: ${opt:region, 'us-east-1'}
+   iamRoleStatements:
+    - Effect: "Allow"
+      Action: 
+       - "dynamodb:*"
+      Resource: "*"
+   environment:
+      BIKES_TABLE_NAME: ${self:custom.bikesTableName}
+
+
+# packaging information 
+package:
+  artifact: 'target/${self:service}-${self:provider.stage}.jar'
+
+functions:
+  listBikes:
+    handler: com.serverless.ListBikesHandler
+    events:
+      - http:
+          path: /bikes
+          method: get
+    timeout: 10 # optional, in seconds, default is 6
+  listBikesNearby:
+    handler: com.serverless.ListBikesNearbyHandler
+    events:
+      - http:
+          path: /bikes/nearby/{address}
+          method: get
+  getBike:
+    handler: com.serverless.GetBikeHandler
+    events:
+      - http:
+          path: /bikes/{id}
+          method: get
+  createBike:
+    handler: com.serverless.CreateBikeHandler
+    events:
+      - http:
+          path: /bikes
+          method: post
+    timeout: 10 # optional, in seconds, default is 6
+  deleteBike:
+    handler: com.serverless.DeleteBikeHandler
+    events:
+      - http:
+          path: /bikes/{id}
+          method: delete
+
+resources:
+   Resources:
+     bikesTable:
+       Type: AWS::DynamoDB::Table
+       Properties:
+         TableName: ${self:custom.bikesTableName}
+         AttributeDefinitions:
+          - AttributeName: id
+            AttributeType: S
+          - AttributeName: geoHash
+            AttributeType: S
+         KeySchema:
+          - AttributeName: id
+            KeyType: HASH
+          - AttributeName: geoHash
+            KeyType: RANGE
+         ProvisionedThroughput:
+            ReadCapacityUnits: 1
+            WriteCapacityUnits: 1
