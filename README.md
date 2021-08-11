@@ -7,6 +7,9 @@ The ownership of this code base is exclusively held by Matthew Heilman.  If you 
 ## Technology
 ### Architecture
 The ABD API is built on a serverless architecture.  The goal was to create an solution in which no infrastructure needed to be managed (provisions, scaled, maintained, etc).
+
+![alt text](https://github.com/matthewdheilmanvanderbilt/Final-Project/blob/master/ArchitectureScreenShot.png?raw=true)
+
 ###Stack
 * Database - AWS DynamoDB
 * API's - AWS Lambda's written in Java
