@@ -1,0 +1,852 @@
+{
+	"info": {
+		"_postman_id": "9cbacb63-c590-4ea3-b66f-a1276d4e5dce",
+		"name": "Remote Bike Testing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Bike 1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function() {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Create Bike 1\", () => {",
+							"  const responseJson = pm.response.json();",
+							"  pm.expect(responseJson.id);",
+							"  pm.globals.set(\"uuid1\", responseJson.id);",
+							"",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"description\": \"Schwinn Banana Seat\", \"gender\": \"U\", \"frameSize\": \"15-16\", \"condition\": \"good\", \"address\": \"West Chester, PA 19380\"}"
+				},
+				"url": {
+					"raw": "https://ny8ztrtpv8.execute-api.us-east-1.amazonaws.com/dev/bikes/",
+					"protocol": "https",
+					"host": [
+						"ny8ztrtpv8",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"bikes",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Bike 2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function() {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Create Bike 1\", () => {",
+							"  const responseJson = pm.response.json();",
+							"  pm.expect(responseJson.id);",
+							"  pm.globals.set(\"uuid1\", responseJson.id);",
+							"",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"description\": \"Schwinn Banana Seat\", \"gender\": \"U\", \"frameSize\": \"15-16\", \"condition\": \"good\", \"address\": \"West Chester, PA 19380\"}"
+				},
+				"url": {
+					"raw": "https://ny8ztrtpv8.execute-api.us-east-1.amazonaws.com/dev/bikes/",
+					"protocol": "https",
+					"host": [
+						"ny8ztrtpv8",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"bikes",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Bike 3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function() {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Create Bike 1\", () => {",
+							"  const responseJson = pm.response.json();",
+							"  pm.expect(responseJson.id);",
+							"  pm.globals.set(\"uuid1\", responseJson.id);",
+							"",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"description\": \"Schwinn Banana Seat\", \"gender\": \"U\", \"frameSize\": \"15-16\", \"condition\": \"good\", \"address\": \"West Chester, PA 19380\"}"
+				},
+				"url": {
+					"raw": "https://ny8ztrtpv8.execute-api.us-east-1.amazonaws.com/dev/bikes/",
+					"protocol": "https",
+					"host": [
+						"ny8ztrtpv8",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"bikes",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Bike 4",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function() {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Create Bike 1\", () => {",
+							"  const responseJson = pm.response.json();",
+							"  pm.expect(responseJson.id);",
+							"  pm.globals.set(\"uuid1\", responseJson.id);",
+							"",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"description\": \"Schwinn Banana Seat\", \"gender\": \"U\", \"frameSize\": \"15-16\", \"condition\": \"good\", \"address\": \"West Chester, PA 19380\"}"
+				},
+				"url": {
+					"raw": "https://ny8ztrtpv8.execute-api.us-east-1.amazonaws.com/dev/bikes/",
+					"protocol": "https",
+					"host": [
+						"ny8ztrtpv8",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"bikes",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Bike 1",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function() {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Bike 1 exists and was fetched\", () => {",
+							"  const responseJson = pm.response.json();",
+							"  pm.expect(responseJson.id);",
+							"  pm.expect(responseJson.id).to.eql(pm.globals.get(\"uuid1\"));",
+							"",
+							"})",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://ny8ztrtpv8.execute-api.us-east-1.amazonaws.com/dev/bikes/{{uuid1}}",
+					"protocol": "https",
+					"host": [
+						"ny8ztrtpv8",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"bikes",
+						"{{uuid1}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Bikes",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function() {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Headers correct\", function() {",
+							"    pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json');",
+							"});",
+							"",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://ny8ztrtpv8.execute-api.us-east-1.amazonaws.com/dev/bikes",
+					"protocol": "https",
+					"host": [
+						"ny8ztrtpv8",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"bikes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Bike Range Test Range 5 / Downingtown",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function() {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"",
+							"pm.test(\"Testing multiple values\", function () ",
+							"{ let arr = [pm.globals.get(\"uuid2\")], responseText = pm.response.text();",
+							"",
+							"    arr.forEach((x) => ",
+							"        { pm.expect(responseText).to.include(x); }",
+							"    ); ",
+							"});",
+							"",
+							"pm.test(\"Testing multiple values\", function () ",
+							"{ let arr = [pm.globals.get(\"uuid1\"), pm.globals.get(\"uuid3\"), pm.globals.get(\"uuid4\")], responseText = pm.response.text();",
+							"",
+							"    arr.forEach((x) => ",
+							"        { pm.expect(responseText).to.not.include(x); }",
+							"    ); ",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://ny8ztrtpv8.execute-api.us-east-1.amazonaws.com/dev/bikes/nearby/\"Downingtown, PA 19335\"?range=5",
+					"protocol": "https",
+					"host": [
+						"ny8ztrtpv8",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"bikes",
+						"nearby",
+						"\"Downingtown, PA 19335\""
+					],
+					"query": [
+						{
+							"key": "range",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Bike Range Test Range 4 / Downingtown",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function() {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"",
+							"pm.test(\"Testing multiple values\", function () ",
+							"{ let arr = [pm.globals.get(\"uuid1\"), pm.globals.get(\"uuid2\")], responseText = pm.response.text();",
+							"",
+							"    arr.forEach((x) => ",
+							"        { pm.expect(responseText).to.include(x); }",
+							"    ); ",
+							"});",
+							"",
+							"pm.test(\"Testing multiple values\", function () ",
+							"{ let arr = [ pm.globals.get(\"uuid3\"), pm.globals.get(\"uuid4\")], responseText = pm.response.text();",
+							"",
+							"    arr.forEach((x) => ",
+							"        { pm.expect(responseText).to.not.include(x); }",
+							"    ); ",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://ny8ztrtpv8.execute-api.us-east-1.amazonaws.com/dev/bikes/nearby/\"Downingtown, PA 19335\"?range=4",
+					"protocol": "https",
+					"host": [
+						"ny8ztrtpv8",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"bikes",
+						"nearby",
+						"\"Downingtown, PA 19335\""
+					],
+					"query": [
+						{
+							"key": "range",
+							"value": "4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Bike Range Test Range 0 / Downingtown",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function() {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"",
+							"pm.test(\"Testing multiple values\", function () ",
+							"{ let arr = [pm.globals.get(\"uuid1\"), pm.globals.get(\"uuid2\")], responseText = pm.response.text();",
+							"",
+							"    arr.forEach((x) => ",
+							"        { pm.expect(responseText).to.include(x); }",
+							"    ); ",
+							"});",
+							"",
+							"pm.test(\"Testing multiple values\", function () ",
+							"{ let arr = [ pm.globals.get(\"uuid3\"), pm.globals.get(\"uuid4\")], responseText = pm.response.text();",
+							"",
+							"    arr.forEach((x) => ",
+							"        { pm.expect(responseText).to.not.include(x); }",
+							"    ); ",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://ny8ztrtpv8.execute-api.us-east-1.amazonaws.com/dev/bikes/nearby/\"Downingtown, PA 19335\"?range=4",
+					"protocol": "https",
+					"host": [
+						"ny8ztrtpv8",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"bikes",
+						"nearby",
+						"\"Downingtown, PA 19335\""
+					],
+					"query": [
+						{
+							"key": "range",
+							"value": "4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Bike 1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 204\", function() {",
+							"    pm.response.to.have.status(204);",
+							"});",
+							"",
+							"pm.test(\"Validate Body String Empty\", function () {",
+							"  pm.response.to.have.body(\"\"); ",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"description\": \"Schwinn Banana Seat\", \"gender\": \"U\", \"frameSize\": \"15-16\", \"condition\": \"good\", \"address\": \"18104\"}"
+				},
+				"url": {
+					"raw": "https://ny8ztrtpv8.execute-api.us-east-1.amazonaws.com/dev/bikes/{{uuid1}}",
+					"protocol": "https",
+					"host": [
+						"ny8ztrtpv8",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"bikes",
+						"{{uuid1}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Bike 2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 204\", function() {",
+							"    pm.response.to.have.status(204);",
+							"});",
+							"",
+							"pm.test(\"Validate Body String Empty\", function () {",
+							"  pm.response.to.have.body(\"\"); ",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"description\": \"Schwinn Banana Seat\", \"gender\": \"U\", \"frameSize\": \"15-16\", \"condition\": \"good\", \"address\": \"18104\"}"
+				},
+				"url": {
+					"raw": "https://ny8ztrtpv8.execute-api.us-east-1.amazonaws.com/dev/bikes/{{uuid2}}",
+					"protocol": "https",
+					"host": [
+						"ny8ztrtpv8",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"bikes",
+						"{{uuid2}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Bike 3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 204\", function() {",
+							"    pm.response.to.have.status(204);",
+							"});",
+							"",
+							"pm.test(\"Validate Body String Empty\", function () {",
+							"  pm.response.to.have.body(\"\"); ",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"description\": \"Schwinn Banana Seat\", \"gender\": \"U\", \"frameSize\": \"15-16\", \"condition\": \"good\", \"address\": \"18104\"}"
+				},
+				"url": {
+					"raw": "https://ny8ztrtpv8.execute-api.us-east-1.amazonaws.com/dev/bikes/{{uuid3}}",
+					"protocol": "https",
+					"host": [
+						"ny8ztrtpv8",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"bikes",
+						"{{uuid3}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Bike 4",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 204\", function() {",
+							"    pm.response.to.have.status(204);",
+							"});",
+							"",
+							"pm.test(\"Validate Body String Empty\", function () {",
+							"  pm.response.to.have.body(\"\"); ",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"description\": \"Schwinn Banana Seat\", \"gender\": \"U\", \"frameSize\": \"15-16\", \"condition\": \"good\", \"address\": \"18104\"}"
+				},
+				"url": {
+					"raw": "https://ny8ztrtpv8.execute-api.us-east-1.amazonaws.com/dev/bikes/{{uuid4}}",
+					"protocol": "https",
+					"host": [
+						"ny8ztrtpv8",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"bikes",
+						"{{uuid4}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TestInvalidBikeID-Get",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 404\", function() {",
+							"    pm.response.to.have.status(404);",
+							"});",
+							"",
+							"pm.test(\"Validate Body String\", function () {",
+							"  pm.response.to.have.body(\"\\\"Bike with id: \\'\" + pm.globals.get(\"invalidID\") + \"\\' not found.\\\"\"); ",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.globals.set(\"invalidID\", \"NotAValidID\");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://ny8ztrtpv8.execute-api.us-east-1.amazonaws.com/dev/bikes/{{invalidID}}",
+					"protocol": "https",
+					"host": [
+						"ny8ztrtpv8",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"bikes",
+						"{{invalidID}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TestInvalidBikeID-Delete",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 404\", function() {",
+							"    pm.response.to.have.status(404);",
+							"});",
+							"",
+							"pm.test(\"Validate Body String\", function () {",
+							"  pm.response.to.have.body(\"\\\"Bike with id: \\'\" + pm.globals.get(\"invalidID\") + \"\\' not found.\\\"\"); ",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.globals.set(\"invalidID\", \"NotAValidID\");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://ny8ztrtpv8.execute-api.us-east-1.amazonaws.com/dev/bikes/{{invalidID}}",
+					"protocol": "https",
+					"host": [
+						"ny8ztrtpv8",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"bikes",
+						"{{invalidID}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Verify All Cleaned up",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function() {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Headers correct\", function() {",
+							"    pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json');",
+							"});",
+							"",
+							"pm.test(\"Testing multiple values\", function () ",
+							"{ let arr = [pm.globals.get(\"uuid1\"), pm.globals.get(\"uuid2\"), pm.globals.get(\"uuid3\"), pm.globals.get(\"uuid4\")], responseText = pm.response.text();",
+							"",
+							"    arr.forEach((x) => ",
+							"        { pm.expect(responseText).to.not.include(x); }",
+							"    ); ",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://ny8ztrtpv8.execute-api.us-east-1.amazonaws.com/dev/bikes",
+					"protocol": "https",
+					"host": [
+						"ny8ztrtpv8",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"bikes"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

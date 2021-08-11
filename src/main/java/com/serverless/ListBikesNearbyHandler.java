@@ -3,12 +3,10 @@ package com.serverless;
 import com.amazonaws.services.lambda.runtime.Context;
 import com.amazonaws.services.lambda.runtime.RequestHandler;
 
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import java.util.Collections;
-import java.util.HashMap;
+
 import java.util.Map;
 import java.util.List;
 
@@ -44,10 +42,6 @@ public class ListBikesNearbyHandler implements RequestHandler<Map<String, Object
 
 			String range = queryStringParameters.get("range");
 			
-			if (range == null) {
-				range = "0";
-			}
-
 			Map<String, Double> coords;
 			coords = OpenStreetMapUtils.getInstance().getCoordinates(address);
 			LOG.debug("latitude :" + coords.get("lat"));
@@ -58,6 +52,12 @@ public class ListBikesNearbyHandler implements RequestHandler<Map<String, Object
 			String geoHash = GeoHash.toHashString(GeoHash.geohash(coords.get("lat"), coords.get("lon"), 60));
 
 			LOG.debug("geohash: " + geoHash);
+			
+			if (range == null) {
+				range = "0";
+			}
+			
+			
 			LOG.debug("geohash substring: " + geoHash.substring(0, Integer.parseInt(range) * 5));
 			// get all bikes
 			List<Bike> bikes = new Bike().listNearby(geoHash.substring(0, Integer.parseInt(range) * 5));
