@@ -13,4 +13,4 @@ jobs:
         with:
           collection: RemoteBikeTesting.postman_collection.json
       - run: npm install -g newman
-      - run: newman run "${{collection}}"
+      - run: newman run RemoteBikeTesting.postman_collection.json
