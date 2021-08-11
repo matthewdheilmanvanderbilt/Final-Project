@@ -11,6 +11,6 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2-beta
         with:
-          collectionID: RemoteBikeTesting.postman_collection.json
+          collection: RemoteBikeTesting.postman_collection.json
       - run: npm install -g newman
-      - run: newman run "${{collectionID}}"
+      - run: newman run "${{collection}}"
